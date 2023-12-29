@@ -1,11 +1,10 @@
 exports.handler = async (event, context) => {
   try {
     const data = JSON.parse(event.body);
-
     const { username, password } = data;
-    const isAuthenticated =
 
-    if (isAuthenticated) {
+    // Replace this with your actual authentication logic
+    if (username === 'demo' && password === 'password') {
       return {
         statusCode: 200,
         body: JSON.stringify({ message: 'Login successful' }),
