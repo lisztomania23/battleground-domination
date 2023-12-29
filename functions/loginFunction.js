@@ -5,7 +5,7 @@ exports.handler = async (event, context) => {
     const data = JSON.parse(event.body);
     const { username, password } = data;
 
-    // For testing purposes, consider the login as successful
+    // For testing purposes, consider the login as successful if username and password are present
     if (username && password) {
       return {
         statusCode: 200,
