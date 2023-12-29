@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Battleground Domination</title>
+</head>
+
+<body>
+
+    <h1>Contact Us</h1>
+    <p>Fill out this form and submit. You will be provided further information to participate in events via email. If
+        you have any queries, email us at <a
+            href="mailto:battlegrounddomination@gmail.com">battlegrounddomination@gmail.com</a>.</p>
+
+    <form class="form-box" action="/submit_form" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pubgId">PUBG ID:</label>
+            <input type="text" id="pubgId" name="pubgId" required>
+        </div>
+
+        <div class="form-group">
+            <label for="optionSelector">Event:</label>
+            <select id="optionSelector" name="selectedOption" required>
+                <option value="frost winter">Frost Winter</option>
+                <option value="godzilla">Godzilla</option>
+                <option value="summer fest">Summer Fest</option>
+                <option value="summer rich">Summer Rich</option>
+            </select>
+        </div>
+
+        <br>
+
+        <input class="submit" type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
