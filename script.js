@@ -1,3 +1,5 @@
+// script.js
+
 document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.getElementById('login-form');
 
@@ -19,8 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const result = await response.json();
       console.log(result);
 
+      if (response.ok) {
+        // Redirect to the home page or another URL
+        window.location.href = '/home/index.html';
+      } else {
+        // Handle login failure (e.g., show an error message)
+        console.error('Login failed:', result.message);
+      }
     } catch (error) {
       console.error('Error during login:', error);
     }
   });
-};
+});
