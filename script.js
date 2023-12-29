@@ -6,28 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
   loginForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
     try {
       const response = await fetch('/.netlify/functions/loginFunction', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({}),
       });
 
       const result = await response.json();
       console.log(result);
 
-      if (response.ok) {
-        // Redirect to the home page or another URL
-        window.location.href = '/home/index.html';
-      } else {
-        // Handle login failure (e.g., show an error message)
-        console.error('Login failed:', result.message);
-      }
+      // Handle the result accordingly (e.g., show a success or error message)
     } catch (error) {
       console.error('Error during login:', error);
     }
