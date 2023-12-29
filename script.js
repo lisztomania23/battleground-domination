@@ -25,13 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (response.ok) {
         // Redirect to the home page
+        console.log('Redirecting to home page...');
         window.location.href = 'home/home.html';
       } else {
         // Handle login failure (e.g., show an error message)
-        console.error('login failed:', result.message);
+        console.error('Login failed:', result.message);
+        // Optionally, display an error message on the page
+        const errorElement = document.getElementById('login-error');
+        errorElement.textContent = 'Login failed. Please check your credentials.';
       }
     } catch (error) {
       console.error('Error during login:', error);
+      // Optionally, display an error message on the page
+      const errorElement = document.getElementById('login-error');
+      errorElement.textContent = 'An unexpected error occurred. Please try again later.';
     }
   });
 });
