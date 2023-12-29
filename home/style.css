@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    margin-inline: 10vw;
+}
+
+nav {
+    width: 100%;
+    height: 15vh;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 2rem;
+    align-items: center;
+}
+
+nav .contact {
+    margin: 20px;
+    cursor: pointer;
+}
+
+nav .contact a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .logo {
+    margin: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.carousel-container {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 5vw;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.achievement_section>p {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.achievements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-inline: 5vw;
+    gap: 20px;
+}
+
+.achievement-item {
+    flex: 0 0 15vw;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.achievement-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.achievement-item p {
+    font-size: 1rem;
+}
+
+.achievement-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    line-height: 30px;
+}
+
+footer a {
+    color: #66b3ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+
+    nav {
+        font-size: 1.5rem;
+    }
+
+    .achievement_section>p {
+        font-size: 2.5rem;
+    }
+
+    .achievement-item {
+        flex: 0 0 30vw;
+    }
+}
+
+@media (max-width: 564px) {
+
+    nav {
+        height: 20vw;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    nav {
+        height: 30vw;
+    }
+}
