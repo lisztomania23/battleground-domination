@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (response.ok) {
         // Redirect to the home page
-        window.location.href = '/home.html';
+        window.location.href = '/home/index.html';
       } else {
         // Handle login failure (e.g., show an error message)
         console.error('Login failed:', result.message);
