@@ -5,11 +5,18 @@ exports.handler = async (event, context) => {
     const data = JSON.parse(event.body);
     const { username, password } = data;
 
-    // For testing purposes, always consider the login as successful
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'Login successful', username }),
-    };
+    // For testing purposes, consider the login as successful
+    if (username && password) {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ message: 'Login successful', username }),
+      };
+    } else {
+      return {
+        statusCode: 401,
+        body: JSON.stringify({ message: 'Login failed' }),
+      };
+    }
   } catch (error) {
     return {
       statusCode: 500,
